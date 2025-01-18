@@ -1,0 +1,3 @@
+A simple IoT temperature and humidity project utilizing an EPS32 dev board and a DHT22 temperature / humidity sensor. The ESP32 is connected to a local wifi network and a local MQTT broker. Periodically, temperature and humidity readings are taken from the DHT22 and published to the MQTT broker. Using Node Red, those values are written to an InfluxDB database and, ultimately, shown on a live Grafana dashboard.
+
+Multiple devices (ESP32 / DHT22 combo) can utilize the exact same code without modification as a unique device ID is constructed (based on the ESP32 MAC address) and included along with each MQTT message uniquely identifying the source of the message.
