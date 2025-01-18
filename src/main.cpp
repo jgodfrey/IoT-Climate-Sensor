@@ -13,9 +13,6 @@ const int mqtt_port = 1883;
 const char *topic_base = "sensors/data";
 const char *topic_discovery = "sensors/discovery";
 
-// Sensor location
-const char *sensor_location = "cave"; // Change this to your desired location (added to MQTT message)
-
 // DHT22 sensor settings
 #define DHTPIN 2      // DHT22 data pin
 #define DHTTYPE DHT22 // DHT22 sensor type
