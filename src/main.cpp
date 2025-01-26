@@ -168,7 +168,7 @@ bool publishSensorData()
 
     serializeJson(doc, buffer);
 
-    if (!client.publish(deviceTopic.c_str(), buffer))
+    if (!client.publish(deviceTopic.c_str(), buffer, true)) // retained message
     {
         Serial.println("Failed to publish sensor data");
         return false;
